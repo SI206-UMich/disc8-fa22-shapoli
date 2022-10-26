@@ -14,8 +14,12 @@ def getLink(soup):
 # founded and organize the same into key-value pairs.
 def getAdmissionsInfo2019(soup):
 
-    colleges = soup.findall('tbody', class_="toccolours")
-    
+    colleges = soup.findall('tr', class_="toccolours")
+    college_lst =[]
+    for x in colleges:
+        college_lst.append(x)
+    return college_lst
+
 
 
 def main():
